@@ -1,21 +1,21 @@
 import mongoose from "mongoose";
 
-const messageSchema = mongoose.Schema({
+const messageSchema = new mongoose.Schema({
     name:{
-        typeof: String,
-        require: true
+        type:String,
+       
     },
     email:{
-        typeof: String,
-        require: true
+        typr:String,
+        
     },
     phone:{
-        typeof: Number,
+        type:Number,
         
     },
     message:{
-        typeof: String,
-        minLength:[4]
+        type:String,
+        minLength:[3]
     }
 })
 
