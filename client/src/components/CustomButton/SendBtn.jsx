@@ -1,8 +1,8 @@
 import React from 'react'
 import "./SendBtn.css"
-const SendBtn = () => {
+const SendBtn = ({sendMessage}) => {
   return (
-    <button className='px-5 py-2'>
+    <button className='px-5 py-2' onClick={sendMessage}>
   <div className="svg-wrapper-1 ">
     <div className="svg-wrapper">
       <svg

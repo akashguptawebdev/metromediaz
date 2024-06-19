@@ -1,12 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Contact.css";
 import { HeroAssets } from "../../assets/AssetsProvider";
 import SendBtn from '../CustomButton/SendBtn'
 import { context } from "../../main";
+import axios from "axios";
+import { toast } from 'react-toastify';
+
+
 const Contact = () => {
+const { toggle } = useContext(context);
 
-  const { toggle } = useContext(context);
+const [name ,setName] = useState("")
+const [email ,setEmail] = useState("")
+const [phone ,setPhone] = useState("")
+const [message ,setMessage] = useState("")
 
+   const sendMessage = async()=>{
+    try{
+      const newMessage = await axios.post("http://localhost:3500/metromediaz/v1/message",{
+        name,
+        email,
+        phone,
+        message
+      })
+
+      toast.success("Message send Successfully")
+
+    }catch(err){
+        toast.error(err.message)
+    }
+
+   }
 
   return (
     <div className={`${toggle?'bg-white text-black' :'bg-black text-white'}  mt-5`} id="Contact">
@@ -34,6 +58,8 @@ const Contact = () => {
                   type="text"
                   placeholder="Name "
                   className="p-2 rounded-md w-full"
+                  value={name}
+                  onChange={(e)=> setName(e.target.value)}
                 />
               </div>
               <div className="py-2">
@@ -41,6 +67,8 @@ const Contact = () => {
                   type="text"
                   placeholder="Email "
                   className="p-2 rounded-md w-full"
+                  value={email}
+                  onChange={(e)=> setEmail(e.target.value)}
                 />
               </div>
               <div className="py-2">
@@ -48,6 +76,8 @@ const Contact = () => {
                   type="text"
                   placeholder="Phone "
                   className="p-2 rounded-md w-full"
+                  value={phone}
+                  onChange={(e)=> setPhone(e.target.value)}
                 />
               </div>
               <div className="py-5">
@@ -58,10 +88,12 @@ const Contact = () => {
                   id=""
                   className="rounded-md text-black p-5 w-full"
                   placeholder="Type Your Message...."
+                  value={message}
+                  onChange={(e)=> setMessage(e.target.value)}
                 ></textarea>
               </div>
 
-              <SendBtn />
+              <SendBtn  sendMessage = {sendMessage} />
             </div>
 
           </div>
