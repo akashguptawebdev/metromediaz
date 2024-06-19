@@ -20,6 +20,7 @@ import boyStand from './boyStand.jpg'
 import contactManremovebgpreview from './contactManremovebgpreview.png'
 import dayMode from "./dayMode.png"
 import nightMode from './nightMode.png'
+import metromediaProfile from "./metromediaProfile.webp"
 export const HeroAssets = {
     metroMediaLogo,
     hamburgerIcon,
@@ -42,5 +43,6 @@ export const HeroAssets = {
     boyStand,
     contactManremovebgpreview,
     dayMode,
-    nightMode
+    nightMode,
+    metromediaProfile
 }

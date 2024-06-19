@@ -23,7 +23,7 @@ const About = () => {
           <div className="flex flex-col justify-center items-center gap-10 border p-5 bg-blue-500">
             <div className="meImg w-48 h-48 ">
               <img
-                src={HeroAssets.metroMediaLogo}
+                src={HeroAssets.metromediaProfile}
                 className="rounded-full"
                 alt=""
               />

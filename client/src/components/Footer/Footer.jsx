@@ -15,13 +15,13 @@ const Footer = () => {
                 <i class="fa-brands fa-instagram  text-3xl"></i>
               </a>
               <a
-                href="#"
+                href="https://m.facebook.com/groups/643688573052777/?ref=share&mibextid=NSMWBT "
                 class="text-gray-300 hover:text-white transition duration-300"
               >
                 <i class="fa-brands fa-facebook text-3xl"></i>
               </a>
               <a
-                href="#"
+                href="https://wa.me/qr/U56RLAO5RCR4E1"
                 class="text-gray-300 hover:text-white transition duration-300"
               >
                 <i class="fa-brands fa-whatsapp text-3xl"></i>
