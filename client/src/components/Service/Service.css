@@ -1,0 +1,18 @@
+/* Add this CSS in your stylesheet */
+.cardSec {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+ 
+  }
+  
+  .cardSec::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+  
+  .cardSec::after {
+    content: '';
+    flex: 0 0 20px; /* Adjust to add spacing at the end for continuous scroll */
+  }
+  
