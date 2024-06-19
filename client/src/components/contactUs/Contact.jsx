@@ -17,7 +17,7 @@ const [message ,setMessage] = useState("")
 
    const sendMessage = async()=>{
     try{
-      const newMessage = await axios.post("http://localhost:3500/metromediaz/v1/message",{
+      const newMessage = await axios.post("https://metromediaz.onrender.com/metromediaz/v1/message",{
         name,
         email,
         phone,
